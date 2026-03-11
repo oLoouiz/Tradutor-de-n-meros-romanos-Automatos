@@ -14,9 +14,12 @@ class ADF
         @cadeia[@indice]
     end
   end
+
+
   
   def iniciar
     estado = "q0"
+    saida = ""
   
     puts "Máquina iniciou no estado: " + estado
   
@@ -24,12 +27,19 @@ class ADF
       case [proximo, estado]
       in ["a", "q0"]
         estado = "q0"
+        saida += "b"
       in ["b", "q0"]
         estado = "q1"
+        saida += "a"
       in ["b", "q1"]
         estado = "q2"
+        saida += "a"
       in ["", "q2"]
+        saida += ""
         puts "Aceito 😀"
+        puts "Estado final: " + estado
+        puts "Entrada: " + @cadeia
+        puts "Saída: " + saida
         break
       else
         puts "Erro"
@@ -42,5 +52,6 @@ class ADF
   end
 end
 
+# entrada = "aabb"
 adf = ADF.new("aabb")
 adf.iniciar
