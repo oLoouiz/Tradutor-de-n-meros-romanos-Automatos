@@ -101,7 +101,43 @@ class ADF
 
         #fim da segunda parte do código | inicio da terceira parte do código
 
+      in ["C", "q0"]
+        estado = "q19"
+        saida += 100
+        
+      in ["C", "q19"]
+        estado = "q20"
+        saida += 100
+
+      in ["C", "q20"]
+        estado = "q21"
+        saida += 100
+
+      in ["M", "q19"]
+        estado = "q22"
+        saida += 800
+
+      in ["D", "q19"]
+        estado = "q23"
+        saida += 300
+
+      in ["D", "q0"]
+        estado = "q24"
+        saida += 500
+
+      in ["C", "q24"]
+        estado = "q25"
+        saida += 100
+
+      in ["C", "q25"]
+        estado = "q26"
+        saida += 100
       
+      in ["C", "q26"]
+        estado = "q27"
+        saida += 100
+
+      # 
 
       # Condições de Aceitação (Quando a string termina)
       in ["", "q1"] | ["", "q2"] | ["", "q3"] | ["", "q5"] | ["", "q6"] | ["", "q7"] | ["", "q8"] | ["", "q9"]
