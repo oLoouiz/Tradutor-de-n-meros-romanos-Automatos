@@ -38,7 +38,7 @@ class ADF
         saida += 8
 	puts "Saída: #{saida}"
       in ["V", "q1"]
-	estado = "q5"
+	estado = "q5" 
         saida += 3
 	puts "Saída: #{saida}"
 	in ["I", "q2"]
@@ -60,15 +60,17 @@ class ADF
 	in ["I", "q9"]
 	  estado ="q10"
 	  saida+= 1
-        puts "Aceito 😀"
-        puts "Estado final: " + estado
-        puts "Entrada: " + @cadeia
-        puts "Saída: #{saida}"
-        break
-      else
-        puts "Erro"
-        break
-      end
+  in ["", "q9"]
+	  estado ="q10"
+      puts "Aceito 😀"
+      puts "Estado final: " + estado
+      puts "Entrada: " + @cadeia
+      puts "Saída: #{saida}"
+      break
+    else
+      puts "Erro"
+      break
+    end
   
       @indice += 1
       puts "Estado: " + estado
