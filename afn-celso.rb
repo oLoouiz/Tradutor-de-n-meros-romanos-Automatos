@@ -172,6 +172,6 @@ class ADF
   end
 end
 
-# Teste com diferentes entradas: "I", "II", "IV", "V", "VI", "IX"
+
 adf = ADF.new("VI")
 adf.iniciar
