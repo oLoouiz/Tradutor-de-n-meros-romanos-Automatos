@@ -461,7 +461,13 @@ class ADF
         saida += 500
 
       # Condições de Aceitação (Quando a string termina)
-      in ["", "q1"] | ["", "q2"] | ["", "q3"] | ["", "q5"] | ["", "q6"] | ["", "q7"] | ["", "q8"] | ["", "q9"]
+    #   in ["", "q1"] | ["", "q2"] | ["", "q3"] | ["", "q5"] | ["", "q6"] | ["", "q7"] | ["", "q8"] | ["", "q9"]
+    #     puts "Aceito 😀"
+    #     puts "Estado final: #{estado}"
+    #     puts "Entrada: #{@cadeia}"
+    #     puts "Saída total: #{saida}"
+    #     break
+    in ["", estado]
         puts "Aceito 😀"
         puts "Estado final: #{estado}"
         puts "Entrada: #{@cadeia}"
@@ -480,5 +486,5 @@ class ADF
 end
 
 
-adf = ADF.new("MMXXIV")
+adf = ADF.new("MMMCMXCIX")
 adf.iniciar
