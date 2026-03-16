@@ -485,6 +485,7 @@ class ADF
   end
 end
 
-
-adf = ADF.new("MMMCMXCIX")
+puts "Digite um número romano:"
+entrada = gets.chomp
+adf = ADF.new(entrada)
 adf.iniciar
