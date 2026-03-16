@@ -79,11 +79,11 @@ class ADF
         estado = "q13"
         saida += 80
 
-      in ["L'", "q10"]
+      in ["L", "q10"]
         estado = "q14"
         saida += 30
 
-      in ["L'", "q0"]
+      in ["L", "q0"]
         estado = "q15"
         saida += 50
 
@@ -99,7 +99,7 @@ class ADF
         estado = "q18"
         saida += 10
 
-        #fim da segunda parte do código | inicio da terceira parte do código
+        #fim da segunda parte do código - falta conectar com a primeira parte | inicio da terceira parte do código
 
       in ["C", "q0"]
         estado = "q19"
@@ -137,7 +137,21 @@ class ADF
         estado = "q27"
         saida += 100
 
-      # 
+      # fim da terceira parte do código - falta conectar com a segunda parte | inicio da quarta parte do código
+
+      in ["M", "q0"]
+        estado = "q28"
+        saida += 1000
+
+      in ["M", "q28"]
+        estado = "q29"
+        saida += 1000
+
+      in ["M", "q29"]
+        estado = "q30"
+        saida += 1000
+
+      # fim da quarta parte do código - falta conectar com a parte tres
 
       # Condições de Aceitação (Quando a string termina)
       in ["", "q1"] | ["", "q2"] | ["", "q3"] | ["", "q5"] | ["", "q6"] | ["", "q7"] | ["", "q8"] | ["", "q9"]
